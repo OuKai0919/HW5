@@ -1,0 +1,280 @@
+//NAME
+Console.WriteLine("Please Enter your name : ");
+string ? name = Console.ReadLine();
+int nameCheck = 0;
+
+do
+{
+    if (name == "")
+    {
+        Console.WriteLine("Please RE-Enter your name : ");
+        name = Console.ReadLine();
+    }
+    else
+    {
+        nameCheck = 1;
+    }
+}while (nameCheck == 0);
+
+//GENDER
+Console.WriteLine("Please Enter your gender (Male/Female) : ");
+string ? gender = Console.ReadLine();
+int genderCheck = 0;
+
+do
+{
+    if (gender == "Male" || gender == "Female" || gender == "male" || gender == "female")
+    {
+        genderCheck = 1;
+    }
+    else
+    {
+        Console.WriteLine("Please RE-Enter your gender (Male/Female) : ");
+        gender = Console.ReadLine();      
+    }
+}while (genderCheck == 0);
+
+//BIRTHDAY
+Console.WriteLine("Please Enter your birthday (yymmdd, ex : 910919) : ");
+string ? birthday = Console.ReadLine();
+int birthdayCheck = 0;
+
+do
+{
+    if(birthday == "" || birthday.Length < 5 || birthday.Length > 7)
+    {
+        Console.WriteLine("Please RE-Enter your birthday (yymmdd, ex : 910919) : ");
+        birthday = Console.ReadLine();
+    }
+    else
+    {
+        birthdayCheck = 1;
+    }
+}while (birthdayCheck == 0);
+//string[] birthdayArray = birthday.Split(new char[birthday.Length-1]);
+
+//STUDENT ID
+Console.WriteLine("Please Enter your Student ID : ");
+string ? studentID = Console.ReadLine();
+int studentIDCheck = 0;
+
+do
+{
+    if (studentID == "")
+    {
+        Console.WriteLine("Please RE-Enter your Student ID : ");
+        studentID = Console.ReadLine();
+    }
+    else
+    {
+        studentIDCheck = 1;
+    }
+}while (studentIDCheck == 0);
+
+Console.WriteLine("Complete Input !");
+
+int loop = 0;
+while(loop == 0)
+{
+    Console.WriteLine("---------------------------------");
+    Console.WriteLine("Enter 1 to read your Info, Enter 2 to revise your Info, Enter 3 to RE-write your Info, Enter 4 to break : ");
+    string ? function = Console.ReadLine();
+
+    if (function == "1")
+    {
+        Console.WriteLine("Your name is : " + name);
+        Console.WriteLine("Your gender is : " + gender);
+        Console.WriteLine("Your birthday is : " + birthday);
+        Console.WriteLine("Your Student ID is : " + studentID);        
+    }
+
+    else if (function == "2")
+    {
+        int reviseCheck = 0;
+
+        while (reviseCheck == 0)
+        {
+            Console.WriteLine("which of these infomations do you want to revise ? (1.name 2.gender 3.birthday 4.studentID 5.Cancel)");
+            string ? reviseThis = Console.ReadLine();
+
+            if (reviseThis == "1" || reviseThis == "name")
+            {
+                Console.WriteLine("Please Enter your new name : ");
+                name = Console.ReadLine();
+                nameCheck = 0;
+                do
+                {
+                    if (name == "")
+                    {
+                        Console.WriteLine("Please RE-Enter your name : ");
+                        name = Console.ReadLine();
+                    }
+                    else
+                    {
+                    nameCheck = 1;
+                    }
+                }while (nameCheck == 0);
+            }
+
+            else if (reviseThis == "2" || reviseThis == "gender")
+            {
+                Console.WriteLine("Please Enter your new gender (Male/Female) : ");
+                gender = Console.ReadLine();
+                genderCheck = 0;
+                do
+                {
+                    if (gender == "Male" || gender == "Female" || gender == "male" || gender == "female")
+                    {
+                        genderCheck = 1;
+                    }
+                    else
+                    {
+                    Console.WriteLine("Please RE-Enter your gender (Male/Female) : ");
+                    gender = Console.ReadLine();
+                    }
+                }while (genderCheck == 0);
+            }
+        
+            else if (reviseThis == "3" || reviseThis == "birthday")
+            {
+                Console.WriteLine("Please Enter your new birthday (yymmdd, ex : 910919) : ");
+                birthday = Console.ReadLine();
+                birthdayCheck = 0;
+                do
+                {
+                    if(birthday == "" || birthday.Length < 5 || birthday.Length > 7)
+                    {
+                        Console.WriteLine("Please RE-Enter your birthday (yymmdd, ex : 910919) : ");
+                        birthday = Console.ReadLine();
+                    }
+                    else
+                    {
+                        birthdayCheck = 1;
+                    }
+                }while (birthdayCheck == 0);           
+            }
+
+            else if (reviseThis == "4" || reviseThis == "studentID")
+            {
+                Console.WriteLine("Please Enter your New Student ID : ");
+                studentID = Console.ReadLine();
+                studentIDCheck = 0;
+
+                do
+                {
+                    if (studentID == "")
+                    {
+                        Console.WriteLine("Please RE-Enter your Student ID : ");
+                        studentID = Console.ReadLine();
+                    }
+                    else
+                    {
+                        studentIDCheck = 1;
+                    }
+                }while (studentIDCheck == 0);         
+            }
+
+            else if(reviseThis == "5" || reviseThis == "Cancel")
+            {
+                Console.WriteLine("Complete revise !!");
+                break;
+            }
+
+            else
+            {
+                Console.WriteLine("Nothing to revise !!");
+            }
+
+            Console.WriteLine("---------------------------------");
+        }
+
+    }
+
+    else if (function == "3")
+    {
+        //NAME
+        Console.WriteLine("Please Enter your name : ");
+        name = Console.ReadLine();
+        nameCheck = 0;
+
+        do
+        {
+            if (name == "")
+            {
+                Console.WriteLine("Please RE-Enter your name : ");
+                name = Console.ReadLine();
+            }
+            else
+            {
+                nameCheck = 1;
+            }
+        }while (nameCheck == 0);
+
+        //GENDER
+        Console.WriteLine("Please Enter your gender (Male/Female) : ");
+        gender = Console.ReadLine();
+        genderCheck = 0;
+
+        do
+        {
+            if (gender == "Male" || gender == "Female" || gender == "male" || gender == "female")
+            {
+                genderCheck = 1;
+            }
+            else
+            {
+                Console.WriteLine("Please RE-Enter your gender (Male/Female) : ");
+                gender = Console.ReadLine();      
+            }
+        }while (genderCheck == 0);
+
+        //BIRTHDAY
+        Console.WriteLine("Please Enter your birthday (yymmdd, ex : 910919) : ");
+        birthday = Console.ReadLine();
+        birthdayCheck = 0;
+
+        do
+        {
+            if(birthday == "" || birthday.Length < 5 || birthday.Length > 7)
+            {
+                Console.WriteLine("Please RE-Enter your birthday (yymmdd, ex : 910919) : ");
+                birthday = Console.ReadLine();
+            }
+            else
+            {
+                birthdayCheck = 1;
+            }
+        }while (birthdayCheck == 0);
+        //string[] birthdayArray = birthday.Split(new char[birthday.Length-1]);
+
+        //STUDENT ID
+        Console.WriteLine("Please Enter your Student ID : ");
+        studentID = Console.ReadLine();
+        studentIDCheck = 0;
+
+        do
+        {
+            if (studentID == "")
+            {
+                Console.WriteLine("Please RE-Enter your Student ID : ");
+                studentID = Console.ReadLine();
+            }
+            else
+            {
+                studentIDCheck = 1;
+            }
+        }while (studentIDCheck == 0);  
+    }
+
+    else if (function == "4")
+    {
+        Console.WriteLine("Bye !!");
+        break;
+    }
+
+    else
+    {
+        Console.WriteLine("Don't have this Function !!");  
+    }
+}
+
